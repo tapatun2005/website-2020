@@ -32,7 +32,7 @@ export default class Animation {
                     duration: 400
                 },
                 {
-                    cb: 'conplited',
+                    cb: 'complited',
                     duration: 200
                 }
             ]
@@ -85,26 +85,8 @@ export default class Animation {
         return this.html.classList.contains('is-redirected') ? true : false
     }
 
-    conplited() {
+    complited() {
         console.log('hello')
     }
 
 }
-
-// setTimeout(() =>{
-//     document.querySelector('.logo').classList.add('is-animated')
-    
-//     setTimeout(() => {
-//         document.querySelector('.logo').classList.add('is-scaled')
-        
-//         setTimeout(() => {
-//             document.querySelector('.logo').classList.add('is-left')
-//             document.querySelector('#background').classList.add('is-half')
-
-//             setTimeout(() => {
-//                 document.querySelector('#menu__toggle').classList.add('is-visible')
-//             }, 500)
-
-//         }, 250)
-//     }, 500)
-// }, 500)

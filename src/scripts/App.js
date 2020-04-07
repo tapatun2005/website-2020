@@ -10,10 +10,13 @@ export default class App {
 
     constructor() {
         this.html = $selector('html')
+        this.app = $selector('#app')
         this.init()
     }
 
     init() {
+
+        this.app.style.display = 'block'
 
         this.animation = new Animation({
             logo: '.logo',

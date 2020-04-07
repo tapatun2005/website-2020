@@ -4,10 +4,26 @@ head
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
   meta(http-equiv='X-UA-Compatible' content='ie=edge')
   title Hi3 website
+  style.
+    html.is-redirected #background {
+      transform: scale(0.5, 1);
+    }
+		
+    @media (max-width: 992px) {
+      html.is-redirected #background {
+        transform: scale(1, 0.7);
+        transform-origin: top center;
+      }
+    }
+
+    #app {
+      display: none;
+    }
+    
   include script.pug
 body
+  #background
   #app
-    #background
     #aside
       include ../Partials/logo.pug
 
