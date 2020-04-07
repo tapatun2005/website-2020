@@ -1,0 +1,39 @@
+// BACKGOUND
+// ==================
+// 1. Default
+// 2. Conditions
+// ==================
+
+#background {
+	position: fixed;
+	top: 0;
+	width: calc(100vw);
+	height: 100vh;
+	background: $black;
+	transform-origin: left center;
+	transform: scale(1, 1);
+	transition: transform .5s $cubic--one;
+    background: linear-gradient(25deg, #0d0d0d 0%, #131313 100%);
+	z-index: -1;
+	
+	@media (max-width: 992px) {
+		transform-origin: top center;
+	}
+
+	&.is-half {
+		transform: scale(0.5, 1);
+		@media (max-width: 992px) {
+			transform: scale(1, 0.7);
+		}
+	}
+}
+
+html.is-redirected {
+    #background {
+		transform: scale(0.5, 1);
+		@media (max-width: 992px) {
+			transform: scale(1, 0.7);
+			transform-origin: top center;
+		}
+    }
+}

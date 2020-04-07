@@ -1,0 +1,18 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  meta(http-equiv='X-UA-Compatible' content='ie=edge')
+  title Hi3 website
+  include script.pug
+body
+  #app
+    #background
+    #aside
+      include ../Partials/logo.pug
+
+    #content
+      block content
+
+    #menu
+      include ../Partials/menu.pug

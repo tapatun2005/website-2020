@@ -1,0 +1,37 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "usage",
+        "debug": true,
+        "corejs": 3
+      }
+    ]
+  ],
+  "plugins": [
+    "@babel/plugin-syntax-dynamic-import",
+    // "babel-plugin-add-module-exports",
+    "@babel/plugin-transform-modules-commonjs",
+    ["transform-imports", {
+      "Functions": {
+        "transform": "../Functions/${member}",
+        "preventFullImport": true
+      },
+      "Components": {
+        "transform": "../${member}/${member}",
+        "preventFullImport": true
+      }
+    }],
+    [
+      "module-resolver",
+      {
+        "root": ["./src/"],
+        "alias": {
+          "@styles": "./src/styles/"
+        }
+      }
+      
+    ]
+  ]
+}

@@ -1,0 +1,11 @@
+<svg id="logo" x="0px" y="0px"
+	 viewBox="0 0 227.56 143.46" style="enable-background:new 0 0 227.56 143.46;">
+	<path id="one" d="M0,0h23.24v143.46H0V0z"/>
+	<path id="two" d="M48.55,0h23.24v143.46H48.55V0z"/>
+	<rect id="three" x="88.21" y="39.79" width="22.54" height="103.66"/>
+	<rect id="four" x="87.71" width="22.54" height="22.25"/>
+	<path id="five" d="M127.14,0h22.54v143.46h-22.54V0z"/>
+	<path id="six" d="M166.08,0h22.54v143.46h-22.54V0z"/>
+	<path id="seven" d="M205.01,0h22.54v143.46h-22.54V0z"/>
+	<rect id="eight" x="23" y="60.59" width="26" height="22.65"/>
+</svg>

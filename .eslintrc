@@ -1,0 +1,39 @@
+---
+extends: eslint:recommended
+parserOptions:
+  sourceType: "module"
+  ecmaVersion: 8
+  ecmaFeatures:
+    modules: false
+
+
+env:
+  es6: true
+  browser: true
+  node: true
+
+rules:
+  // indent: [2, 2] # 2 spaces indentation
+  max-len: [2, 160, 4]
+  quotes: [2, "single"]
+  semi: [2, "never"]
+  no-multiple-empty-lines: [2, {"max": 2}]
+  no-console: "off"
+
+  brace-style: [2, "stroustrup"]
+  //comma-dangle: [2, "always-multiline"]
+  comma-style: [2, "last"]
+  computed-property-spacing: [2, "never"]
+  dot-location: [2, "property"]
+
+  one-var: [2, "never"]
+  #no-var: [2]
+  no-bitwise: [2]
+
+  object-curly-spacing: ["error", "always"]
+  array-bracket-spacing: [2, "never"]
+  space-unary-ops: [2, {"words": true, "nonwords": false}]
+  keyword-spacing: [2, {"after": true}]
+  space-before-blocks: [2, "always"]
+  space-in-parens: [2, "never"]
+  spaced-comment: [2, "always"]

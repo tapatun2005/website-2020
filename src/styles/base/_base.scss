@@ -1,0 +1,34 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html,
+body {
+  width: 100vw;
+  height: auto;
+  @extend %f-normal;
+  color: $black;
+  font-size: 18px;
+  line-height: 28px;
+  position: relative;
+  font-family: $font-normal;
+  padding: 0;
+  margin: 0;
+}
+
+#app {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}

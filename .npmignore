@@ -1,0 +1,15 @@
+# Folders
+src/
+config/
+node_modules/
+build/
+dev/
+dist/
+
+# Dev files
+.babelIrc
+.editorconfig
+.eslintignore
+.eslintrc
+
+postcss.config.js
