@@ -1,12 +1,13 @@
 extends ../Layout/header.pug
 
 block aside
-  include ../Partials/aside.pug
   include ../Partials/logo.pug
-
-  a(href="" class="link link__aside")
+  h1.-sm#studio Studio
+  a(href="" class="link-arrow -grey")
     span About us
-    include ../../assets/images/circles.svg
+    ._icon
+      include ../../assets/images/circles.svg
+      include ../../assets/images/arrow.svg
 
 block content
   main

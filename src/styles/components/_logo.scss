@@ -4,7 +4,8 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 	width: 50%;
-	transition: transform .25s $cubic--one;
+	transition: transform .25s $cubic--one,
+				opacity .35s $cubic--one;
 
 	path,
 	rect {
@@ -82,3 +83,16 @@
 		}
 	}
 }
+
+.is-menu {
+	.logo.is-left {
+		#logo {
+			transform: translate(-100%, 35%) scale(1.1);
+			opacity: .1;
+			@media (max-width: 992px) {
+				transform: translate(-50%, calc(-50% - 15vh)) scale(1);
+			}
+		}
+	}
+}
+

@@ -8,6 +8,7 @@ export default class Menu {
         this.menu = $selector(menu)
         this.toggle = $selector(toggle)
         this.toggleIcon = $selector(`${toggle} > *`)
+        this.html = $selector('html')
         this.init()
     }
 
@@ -20,5 +21,6 @@ export default class Menu {
     _toggle() {
         this.menu.classList.toggle('is-active')
         this.toggle.classList.toggle('is-active')
+        this.html.classList.toggle('is-menu')
     }
 }
