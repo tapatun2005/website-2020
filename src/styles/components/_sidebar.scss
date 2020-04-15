@@ -1,0 +1,45 @@
+#sidebar {
+    a {
+        @media (max-width: 992px) {
+            order: 1;
+            margin-left: 10px;
+            display: none;
+        }
+    }
+
+    .icon {
+        width: 20px;
+        height: 20px;
+        background: $white;
+        opacity: .1;
+    }
+
+    ._logo {
+        width: 40px;
+        height: 25px;
+        transform: rotate(-90deg);
+
+        @media (max-width: 992px) {
+            transform: rotate(0);
+            order: 0;
+            margin-right: 20px;
+        }
+
+        path, 
+		rect {
+            fill: rgba($white, .4);
+            @media (max-width: 992px) {
+                fill: $orange;
+            }
+		}
+
+		.five,
+		.six,
+		.seven {
+            fill: rgba($white, .1);
+            @media (max-width: 992px) {
+                fill: $orange;
+            }
+		}
+    }
+}

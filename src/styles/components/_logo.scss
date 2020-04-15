@@ -11,7 +11,7 @@
 		transition: transform .5s $cubic--one;
 	}
 
-	#eight {
+	.eight {
 		transition: transform .25s $cubic--one .2s;	
 	}
 }
@@ -25,9 +25,9 @@
 			fill: $white;
 		}
 
-		#five,
-		#six,
-		#seven {
+		.five,
+		.six,
+		.seven {
 			fill: $black;
 		}
 	}
@@ -40,13 +40,13 @@
 			transform: scale(1, 0)
 		}
 		
-		#one,
-		#three,
-		#six {
+		.one,
+		.three,
+		.six {
 			transform-origin: bottom center;
 		}
 
-		#eight {
+		.eight {
 			transform: scale(0, 1);
 			transform-origin: left center;
 		}
@@ -58,7 +58,7 @@
 			transform: scale(1, 1);
 		}
 
-		#eight {
+		.eight {
 			transform: scale(1, 1);
 		}
 	}
@@ -76,8 +76,8 @@
 		#logo {
 			transition: transform .5s $cubic--one;
 			transform: translate(-100%, -50%) scale(.5);
-			@media (max-width: 992px) { 
-				transform: translate(-50%, -25vh) scale(.75);
+			@media (max-width: 992px) {
+				transform: translate(-50%, calc(-50% - 15vh)) scale(.75);
 			}
 		}
 	}

@@ -8,7 +8,7 @@
     transition: transform .45s $cubic--one,
                 opacity .35s $cubic--one;
     @media (max-width: 992px) {
-        top: 25%;
+        transform: translate(-50%, -550%);
     }
 }
 
@@ -16,5 +16,8 @@
     #studio {
         opacity: 1;
         transform: translate(-50%, -375%);
+        @media (max-width: 992px) {
+            transform: translate(-50%, -600%);
+        }
     }
 }
