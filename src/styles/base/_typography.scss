@@ -1,0 +1,59 @@
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6,
+.title {
+	font-family: $font-bold;
+
+	&.-light {
+		color: $grey;
+	}
+	
+	&.-orange {
+		color: $orange;
+	}
+
+}
+
+
+h1 {
+	font-size: 8vw;
+	line-height: 7vw;
+	margin-bottom: 2vw;
+	&.-sm {
+		font-size: 5vw;
+		line-height: 4.5vw;
+	}
+}
+
+h2 {
+	font-size: 4vw;
+	line-height: 4vw;	
+	margin-bottom: 2vw;
+	&.-lg {
+		font-size: 5.5vw;
+		line-height: 5vw;
+	}
+}
+
+h4 {
+	font-size: 6vw;
+	line-height: 5vw;
+}
+
+.title {
+	&.-lg {
+		font-size: 10vw;
+		line-height: 9vw;
+	}
+}
+
+p {
+	margin-bottom: 40px;
+
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+}

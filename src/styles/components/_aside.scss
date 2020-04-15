@@ -1,0 +1,20 @@
+#studio {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+    transform: translate(-50%, -350%);
+    opacity: 0;
+    font-weight: 100;
+    transition: transform .45s $cubic--one,
+                opacity .35s $cubic--one;
+    @media (max-width: 992px) {
+        top: 25%;
+    }
+}
+
+.is-loaded {
+    #studio {
+        opacity: 1;
+        transform: translate(-50%, -375%);
+    }
+}

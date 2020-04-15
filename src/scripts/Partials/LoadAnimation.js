@@ -2,7 +2,7 @@ import {
     $selector
 } from 'Functions'
 
-export default class Animation {
+export default class LoadAnimation {
     constructor(els = {}) {
         
         this.logo = $selector(els.logo)
@@ -27,13 +27,13 @@ export default class Animation {
                     cb: 'moveBg',
                     duration: 500
                 },
-                {
-                    cb: 'menuShow',
-                    duration: 400
-                },
+                // {
+                //     cb: 'menuShow',
+                //     duration: 400
+                // },
                 {
                     cb: 'complited',
-                    duration: 200
+                    duration: 450
                 }
             ]
         }
@@ -86,7 +86,7 @@ export default class Animation {
     }
 
     complited() {
-        console.log('hello')
+        this.html.classList.add('is-loaded')
     }
 
 }

@@ -7,7 +7,17 @@
 
 // 1. Default
 // -----------------
-main {
+#content {
+	margin-left: calc(50vw);
+	// display: none;
+}
+
+.content {
+	margin-left: 5vw;
+}
+
+.container {
+	padding: 5vw 7vw;
 }
 // -----------------
 

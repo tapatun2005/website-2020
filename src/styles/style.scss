@@ -4,10 +4,12 @@
 
 @import 'base/reset';
 @import 'base/base';
+@import 'base/typography';
 
 @import 'layout/header';
 @import 'layout/aside';
 @import 'layout/content';
 @import 'layout/footer';
 
+@import 'components/background';
 @import 'components/menu';

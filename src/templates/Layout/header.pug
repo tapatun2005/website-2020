@@ -22,11 +22,12 @@ head
     }
 
   include script.pug
+
 body
   #background
   #app
     #aside
-      include ../Partials/logo.pug
+      block aside
 
     #content
       block content

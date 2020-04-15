@@ -3,7 +3,7 @@ import {
     $selectors 
 } from 'Functions'
 
-import Animation from './Partials/Animation.js'
+import LoadAnimation from './Partials/LoadAnimation.js'
 import Menu from './Partials/Menu.js'
 
 export default class App {
@@ -18,7 +18,7 @@ export default class App {
 
         this.app.style.display = 'block'
 
-        this.animation = new Animation({
+        this.animation = new LoadAnimation({
             logo: '.logo',
             bg: '#background',
             menu: '#menu__toggle',
