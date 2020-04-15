@@ -5,10 +5,15 @@ head
   meta(http-equiv='X-UA-Compatible' content='ie=edge')
   title Hi3 website
   style.
+    
     html.is-redirected #background {
       transform: scale(0.5, 1);
     }
-		
+
+    #app {
+      display: none;
+    }
+
     @media (max-width: 992px) {
       html.is-redirected #background {
         transform: scale(1, 0.7);
@@ -16,10 +21,6 @@ head
       }
     }
 
-    #app {
-      display: none;
-    }
-    
   include script.pug
 body
   #background
