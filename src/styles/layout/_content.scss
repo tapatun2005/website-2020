@@ -8,8 +8,18 @@
 // 1. Default
 // -----------------
 #content {
+	opacity: 0;
+	transform: translate(0, 20px);
 	margin-left: calc(50vw);
-	// display: none;
+	transition: opacity .5s $cubic--one,
+				transform .5s $cubic--one;
+	
+	@media(max-width: 992px) {
+		transform: translate(0);
+		margin-left: 0;
+		margin-top: 69.5vh;
+	}
+
 }
 
 .content {
@@ -24,4 +34,29 @@
 
 // 2. Blocks
 // -----------------
+// -----------------
+
+
+// 3. Global
+// -----------------
+
+.is-loaded {
+	#content {
+		opacity: 1;
+		transform: translate(0);
+	}
+}
+.is-menu {
+	#content {
+		transition-duration: 0s;
+		opacity: 0;
+		transform: translate(0, 20px);
+		pointer-events: none;
+		@media(max-width: 992px) {
+			transform: translate(0);
+			opacity: 1;
+
+		}
+	}
+}
 // -----------------

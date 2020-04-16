@@ -1,0 +1,16 @@
+.page-homepage {
+	height: 100vh;
+	max-height: 100vh;
+	display: flex;
+    flex-direction: column;
+    
+    @media(max-width: 992px) {
+        height: auto;
+	    max-height: none;
+    }
+
+	.works {
+		flex: 1 0 auto;
+		position: relative;
+	}
+}

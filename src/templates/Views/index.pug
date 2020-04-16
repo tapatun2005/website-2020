@@ -10,5 +10,33 @@ block aside
       include ../../assets/images/arrow.svg
 
 block content
-  main
-    p
+  main.page-homepage
+    
+    .services
+      ul.services__list
+        li
+          a(href="")
+            div
+              span
+            h3 Design
+        li
+          a(href="")
+            div
+              span
+            h3 Web Dev
+        li
+          a(href="")
+            div
+              span
+            h3 Branding
+
+      .services__cta
+        h2.-orange.-lg Services
+        a(href="/services" class="button")
+          span More
+          ._icon
+            include ../../assets/images/arrow.svg
+    
+    .works
+      h2.title.-lg.-light Works
+      include ../Partials/gallery.pug

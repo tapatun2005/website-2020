@@ -1,0 +1,176 @@
+button,
+.button,
+input[type="submit"] {
+	
+	display: inline-block;
+	padding: 0.5vw 1.5vw;
+	color: $white;
+	background: $black;
+	font-family: $font-bold;
+	margin: 20px 0;
+    transition-property: color, background;
+    transition-duration:  .1s, .1s;
+    transition-timing-function: $cubic--one;
+	white-space: nowrap;
+	overflow: hidden;
+    position: relative;
+    text-decoration: none;
+
+    span {
+        display: inline-block;
+        transform-origin: right center;
+        transition: transform .1s $cubic--one;
+    }
+
+	&:before {
+		content: "";
+		width: 150%;
+		height: 100%;
+		position: absolute;
+		background: $white;
+		top: 0;
+		right: 100%;
+		transition: transform .25s $cubic--one;
+		z-index: -1;
+	}
+
+	svg {
+		margin-left: 10px;
+		width: 16px;
+    }
+    
+    ._icon {
+        display: inline-block;
+        transition: transform .2s $cubic--one;
+    }
+
+	
+    polyline,
+    line {
+        fill: none;
+        stroke: $orange;
+        stroke-width: 2px;
+	}
+
+
+	&.-secondary {
+		background: $orange;
+	}
+
+	&:hover {
+        transition-delay: 0s, .2s;
+        color: $black;
+        background: rgba($black, 0);
+
+        span {
+            transform: scale(0.9);
+        }
+
+        ._icon {
+            transform: translate(10px);
+        }
+		
+		&:before {
+			transform: translate(99%, 0);
+		}
+	}
+
+}
+
+
+// .button__circle {
+
+// 	margin-top: 20px;
+// 	display: inline-block;
+// 	position: relative;
+// 	width: 65px;
+// 	height: 65px;
+// 	border-radius: 50%;
+// 	border: 3px solid $orange;
+	
+// 	svg {
+// 		width: 45%;
+// 		position: absolute;
+// 		top: 50%;
+// 		left: 50%;
+// 		transform: translate(-50%, -50%);
+// 	}
+
+// 	polygon {
+// 		fill: $white;
+
+// 	}
+
+// 	&.-sm {
+// 		width: 50px;
+// 		height: 50px;
+// 	}
+
+// }
+
+
+.prev,
+.next {
+	background: $black;
+	width: 75px;
+	height: 75px;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+	box-shadow: 3px 10px 50px rgba($black, .65); 
+
+	&:before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background: $orange;
+		top: 0;
+		transition: transform .2s $cubic--one;
+	}
+
+	svg {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 30%;
+	}
+
+	polygon {
+		fill: $white;
+	}
+}
+
+.prev {
+	
+	&:before {
+		left: 100%;
+	}
+
+	svg {
+		transform: translate(-50%, -50%) rotate(180deg);
+	}
+
+
+
+	&:hover {
+		&:before {
+			transform: translate(-100%) scale(2) rotate(45deg);
+		}
+	}
+}
+
+.next {
+
+	&:before {
+		right: 100%;
+	}
+
+	&:hover {
+		&:before {
+			transform: translate(100%) scale(2) rotate(-45deg);
+		}
+	}
+
+}

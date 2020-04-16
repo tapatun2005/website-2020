@@ -2,6 +2,7 @@
 $white: #fff;
 $black: #000;
 $grey: #d4d4d4;
+$grey-dark: #323232;
 $orange: #ff7e00;
 
 // Breakpoints
@@ -25,3 +26,5 @@ $cubic--one: cubic-bezier(0.250, 0.460, 0.450, 0.940);
 // Font
 $font-normal: 'Roboto Condensed', sans-serif;
 $font-bold: 'Bebas';
+
+$shadow: 0 10px 40px rgba($black, .35);
