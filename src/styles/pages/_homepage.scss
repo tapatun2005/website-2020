@@ -12,5 +12,11 @@
 	.works {
 		flex: 1 0 auto;
 		position: relative;
+
+		@media(max-width: 992px) {
+			height: auto;
+			min-height: 100vh;
+			background: $white;
+		}
 	}
 }
