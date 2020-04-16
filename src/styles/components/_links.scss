@@ -98,5 +98,6 @@
     .link-arrow{
         transform: translate(20px);
         opacity: 0;
+        pointer-events: none;
     }
 }

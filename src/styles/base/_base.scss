@@ -12,6 +12,11 @@ html {
   display: none;
 }
 
+::selection {
+  background-color: $orange;
+  color: $white;
+}
+
 html,
 body {
   width: 100vw;
