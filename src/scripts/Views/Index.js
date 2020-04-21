@@ -6,6 +6,7 @@ import '@styles/Views/Index.scss'
 
 // Imports
 // ------------------------
+import '../../assets/images/placeholder.jpg'
 
 // Init app scripts
 // ---------------------

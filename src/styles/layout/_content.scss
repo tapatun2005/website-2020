@@ -44,10 +44,12 @@
 	#content {
 		opacity: 1;
 		transform: translate(0);
+		transition-delay: .25s;
 	}
 }
 .is-menu {
 	#content {
+		transition-delay: 0s;
 		transition-duration: 0s;
 		opacity: 0;
 		transform: translate(0, 20px);

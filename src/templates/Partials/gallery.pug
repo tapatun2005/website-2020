@@ -1,18 +1,17 @@
 .gallery
-	ul.gallery__list
-		li.gallery__item
-			div
+	.gallery__list
+		ul.gallery__images
+			li(style="background-image: url(/assets/placeholder.jpg)")
+		ul.gallery__content
+			li
 				h4 BHF
 				p Small description here
-				a(href="" class="button__circle" title="")
-					include ../../assets/images/arrow.svg
+				a(href="" class="link-arrow -white")
+					._icon
+						include ../../assets/images/circles.svg
+						include ../../assets/images/arrow.svg
 
-		li.gallery__item
-			div
-				h4 BHF
-				p Small description here
-				a(href="" class="button__circle" title="")
-					include ../../assets/images/arrow.svg
+		
 	.gallery__nav
 		.prev
 			include ../../assets/images/arrow.svg

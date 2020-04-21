@@ -12,6 +12,14 @@
     @media (max-width: 992px) {
         transform: translate(-50%, -400%);
     }
+
+    // span {
+    //     cursor: default;
+    //     transition: color .5s $cubic--one;
+    //     &:hover {
+    //         color: $white;
+    //     }
+    // }
 }
 
 .is-loaded {

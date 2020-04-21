@@ -66,6 +66,21 @@
         }
     }
 
+    &.-white {
+        circle {
+            &:first-child {
+                stroke: rgba($white, .1);
+            }
+            &:last-child {
+                stroke: $white;
+            }
+        }
+        polyline,
+        line {
+            stroke: $white;
+        }
+    }
+
     &:hover {
         span {
             transform: scale(0.9);
