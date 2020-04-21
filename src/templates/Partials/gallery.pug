@@ -1,8 +1,24 @@
 .gallery
 	.gallery__list
 		ul.gallery__images
-			li(style="background-image: url(/assets/placeholder.jpg)")
+			li
+				<picture>
+					source(srcset="/assets/placeholder.jpg" media="(min-width: 992px)")
+					img(src="/assets/placeholder.jpg")
+				</picture>
+			li
+				<picture>
+					source(srcset="/assets/placeholder.jpg" media="(min-width: 992px)")
+					img(src="/assets/placeholder.jpg")
+				</picture>
 		ul.gallery__content
+			li
+				h4 BHF
+				p Small description here
+				a(href="" class="link-arrow -white")
+					._icon
+						include ../../assets/images/circles.svg
+						include ../../assets/images/arrow.svg
 			li
 				h4 BHF
 				p Small description here

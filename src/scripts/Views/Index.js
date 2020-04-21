@@ -11,10 +11,12 @@ import '../../assets/images/placeholder.jpg'
 // Init app scripts
 // ---------------------
 import App from '../App'
+import Gallery from '../Partials/Gallery.js'
 
 
 window.addEventListener('load', () => {
     const app = new App()
-    console.log(app)
+    const gallery = new Gallery('.gallery')
+    console.log(app, gallery)
 })
 // ---------------------
