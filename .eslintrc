@@ -15,7 +15,7 @@ env:
 rules:
   // indent: [2, 2] # 2 spaces indentation
   max-len: [2, 160, 4]
-  quotes: [2, "single"]
+  // quotes: [2, "single"]
   semi: [2, "never"]
   no-multiple-empty-lines: [2, {"max": 2}]
   no-console: "off"
