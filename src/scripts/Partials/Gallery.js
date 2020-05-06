@@ -1,7 +1,12 @@
 import {
+    $pauseEvent,
     $selector,
     $selectors
 } from 'Functions'
+
+import {
+    TextToSpan
+} from 'Components'
 
 
 export default class Gallery {
@@ -9,6 +14,7 @@ export default class Gallery {
         this.el = $selector(el)
         this.selectors = $selectors(`${el} ul`)
         this.slides = $selectors(`${el} .gallery__slider li`)
+        this.titles = `${el} h4`
         this.nextBtn = $selector(`${el} .next`)
         this.prevBtn = $selector(`${el} .prev`)
         this.lists = []
@@ -17,10 +23,16 @@ export default class Gallery {
         this.active = opts.active ? opts.active : 0
         this.prev = null
         this.next = null
+        this.isDown = false
         this.init()
     }
 
     init() {
+        
+        if ($selector(this.titles)) {
+           new TextToSpan(this.titles)
+        }
+
         this.getItems()
         this.handlers()
         this.setPositions(0)
@@ -37,17 +49,46 @@ export default class Gallery {
     }
 
     handlers() {
-        this.nextBtn.addEventListener('click', () => { 
-            this.goTo('next')
-        })
-        this.prevBtn.addEventListener('click', () => { 
-            this.goTo('prev')
-        })
+        this.nextBtn.addEventListener('click', () => this.goTo('next'))
+        this.prevBtn.addEventListener('click', () => this.goTo('prev'))
+
+        this.el.addEventListener('mousedown', (e) => this.mouseDown(e))
+        this.el.addEventListener('mousemove', (e) => this.mouseMove(e))
+        this.el.addEventListener('mouseup', () => this.mouseUp())
+        this.el.addEventListener('touchstart', (e) => this.mouseDown(e))
+        this.el.addEventListener('touchmove', (e) => this.mouseMove(e))
+        this.el.addEventListener('touchend', () => this.mouseUp())
+    
+    }
+
+    mouseDown(e) {
+        $pauseEvent(e)
+        this.isDown = true
+        if (this.isDown)  {
+            this.initialX = (e.clientX || e.touches[0].pageX)
+        }
+    }
+
+    mouseMove(e) {
+        $pauseEvent(e)
+        if (this.isDown) {
+            this.currentX   = e.clientX || e.touches[0].clientX
+            this.diff = (this.currentX - this.initialX)
+        }
+    }
+
+    mouseUp() {
+        this.isDown = false
+        if (Math.abs(this.diff) >= 50) {
+            this.goTo(this.diff < 0 ? 'next' : 'prev')
+        }
     }
 
     goTo(dir) {
-        let next = 0
+        let next = null
+
         if (dir === 'next') {
+
             if (this.active === this.len) {
                 next = 0
             } 
@@ -63,6 +104,7 @@ export default class Gallery {
                 next = this.active - 1
             }
         }
+        console.log(next)
 
         this.setPositions(next)
     }
@@ -88,6 +130,7 @@ export default class Gallery {
     }
 
     setClasses() {
+        
         for (let i = 0; i < this.lists.length; i += 1) {
             const x = this.lists[i].items
             
@@ -105,14 +148,6 @@ export default class Gallery {
             x[this.next].classList.add('is-next')
         }
 
-        this.setSlides()
-    }
-
-    setSlides() {
-        let w = this.slides[this.active].clientWidth
-        this.slides[this.prev].style.transform = `matrix(1, 0, 0, 1, -${w}, 0)`
-        this.slides[this.active].style.transform = `matrix(1, 0, 0, 1, 0, 0)`
-        this.slides[this.next].style.transform = `matrix(1, 0, 0, 1, ${w}, 0)`
     }
 
 }

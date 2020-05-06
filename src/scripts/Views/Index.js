@@ -15,10 +15,10 @@ import '../../assets/images/placeholder3.jpg'
 import App from '../App'
 import Gallery from '../Partials/Gallery.js'
 
-
 window.addEventListener('load', () => {
     const app = new App()
     const gallery = new Gallery('.gallery')
     console.log(app, gallery)
+
 })
 // ---------------------
